@@ -28,9 +28,9 @@ class YandexDisk:
             print("Success")
 
 
-path_to_file = 'test.txt'
+path_to_file = ...
 filename = 'test.txt'
-token = 'y0_AgAAAABm9fLyAADLWwAAAADlkdsABj04B_WkQze75SKExP7Cg_5FF4w'
+token = ...
 ya = YandexDisk(token=token)
 ya.upload_file_to_disk(path_to_file, filename)
 
