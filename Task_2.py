@@ -1,5 +1,5 @@
 import requests
-import yadisk
+from yadisk import YaDisk
 from pprint import pprint
 
 class YandexDisk:
@@ -23,14 +23,13 @@ class YandexDisk:
     def upload_file_to_disk(self, disk_file_path, filename):
         data = self._get_upload_link(disk_file_path=disk_file_path)
         url = data.get('href')
-        response = requests.put(data, data=open(filename, 'rb'))
+        response = requests.put(url, data=open(filename, 'rb'))
         if response.status_code == 201:
             print("Success")
 
 
-path_to_file = ...
+path_to_file = 'test.txt'
 filename = 'test.txt'
-token = ...
+token = 'y0_AgAAAABm9fLyAADLWwAAAADlkdsABj04B_WkQze75SKExP7Cg_5FF4w'
 ya = YandexDisk(token=token)
 ya.upload_file_to_disk(path_to_file, filename)
-
