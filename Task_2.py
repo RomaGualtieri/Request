@@ -30,6 +30,6 @@ class YandexDisk:
 
 path_to_file = 'test.txt'
 filename = 'test.txt'
-token =
+token = ...
 ya = YandexDisk(token=token)
 ya.upload_file_to_disk(path_to_file, filename)
